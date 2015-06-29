@@ -1,0 +1,34 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://v1.test/"
+           xmlns:tns="http://v1.test/">
+
+  <xs:complexType name="TestObject">
+    <xs:sequence>
+      <xs:element name="cat">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"></xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"></xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="object">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"></xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="date">
+        <xs:simpleType>
+          <xs:restriction base="xs:date"></xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="test" type="tns:TestObject"></xs:element>
+</xs:schema>
